@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package ecommerce;
+
+service EcommerceService {
+  rpc GetProductStream(ProductRequest) returns (stream ProductResponse);
+}
+
+message ProductRequest {
+  string product_id = 1;
+}
+
+message ProductResponse {
+  string Order_Date = 1;
+  string Time = 2;
+  string Aging = 3;
+  string Customer_Id = 4;
+  string Gender = 5;
+  string Device_Type = 6;
+  string Customer_Login_type = 7;
+  string Product_Category = 8;
+  string Product = 9;
+  double Sales = 10;
+  int32 Quantity = 11;
+  double Discount = 12;
+  double Profit = 13;
+  double Shipping_Cost = 14;
+  string Order_Priority = 15;
+  string Payment_method = 16;
+}
