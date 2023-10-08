@@ -6,6 +6,6 @@ export const typeormDataSource = new DataSource({
   synchronize: false,
   logging: vars.app.env !== 'production',
   entities: ['./entities/*.ts'],
-  migrations: [__dirname + "/db/migrations/*.ts"],
+  migrations: ["db/migrations/*.ts"],
 
 });
