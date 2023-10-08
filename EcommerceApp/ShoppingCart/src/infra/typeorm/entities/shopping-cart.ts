@@ -11,10 +11,10 @@ export class ShoppingCart {
   @Column({ type: 'timestamptz' })
   created: Date;
 
-  @Column({ name: "user_id"})
+  @Column({ name: "user_id", type: "uuid"})
   userId: string;
 
-  @Column({ name: "item_id"})
+  @Column({ name: "item_id", type: "uuid"})
   itemId: string;
 
   @Column({ type: "int" })

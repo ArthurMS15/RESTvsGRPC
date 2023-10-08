@@ -17,7 +17,8 @@
     "test:ci:u": "npm run test:u -- --coverage",
     "test:ci:i": "npm run test:i -- --coverage",
     "test:staged": "npm test -- --findRelatedTests",
-    "test:badges": "npm run test:ci && jest-coverage-badges input './.coverage/coverage-summary.json' output './.public'"
+    "test:badges": "npm run test:ci && jest-coverage-badges input './.coverage/coverage-summary.json' output './.public'",
+    "typeorm": "typeorm-ts-node-esm"
   },
   "devDependencies": {
     "@commitlint/cli": "17.4.2",

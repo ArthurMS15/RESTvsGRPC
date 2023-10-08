@@ -21,21 +21,3 @@ services:
       interval: 10s
       timeout: 5s
       start_period: 10s
-  liquibase:
-    platform: linux/amd64
-    image: liquibase/liquibase
-    hostname: liquibase
-    networks: [ shopping-cart ]
-    container_name: shopping-cart-liquibase
-    depends_on: [ postgres ]
-    volumes: [ ./db:/liquibase/changelog ]
-    command: "bash -c 'liquibase \
-                       --url=jdbc:postgresql://postgres:5432/postgres \
-                       --searchPath=/liquibase/changelog \
-                       --changeLogFile=changelog.xml \
-                       --username=postgres \
-                       --password=postgres \
-                       --databaseChangeLogTableName=_changelog \
-                       --databaseChangeLogLockTableName=_changelog_lock \
-                       update'"
-
