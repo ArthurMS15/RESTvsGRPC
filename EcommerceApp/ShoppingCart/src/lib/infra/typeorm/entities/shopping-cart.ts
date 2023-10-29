@@ -5,16 +5,16 @@ export class ShoppingCart {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ type: 'timestamptz' })
-  timestamp: Date;
+  @Column({ type: 'timestamptz', default: () => "CURRENT_TIMESTAMP"})
+  updatedAt: Date;
 
-  @Column({ type: 'timestamptz' })
-  created: Date;
+  @Column({ type: 'timestamptz', default: () => "CURRENT_TIMESTAMP"})
+  createdAt: Date;
 
-  @Column({ name: "user_id", type: "uuid"})
+  @Column({ type: "uuid"})
   userId: string;
 
-  @Column({ name: "item_id", type: "uuid"})
+  @Column({  type: "uuid"})
   itemId: string;
 
   @Column({ type: "int" })

@@ -1,6 +1,6 @@
-import { typeormDataSource } from './infra/typeorm/data-source';
+import { typeormDataSource } from './lib/infra/typeorm/data-source';
 import logger from './logger';
-import app from './main/app';
+import app from './web/app';
 import vars from './vars';
 
 

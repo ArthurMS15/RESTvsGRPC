@@ -15,10 +15,4 @@ routes.use('/health', async (_req, res) => {
   });
 });
 
-routes.post('/cart', async (_req, res) => {
-  const {id_usuario,id_item,quantidade} = _req.body;
-  //interagir com bd lógica
-  res.json({message: 'Item adicionado ao carrinho', id_usuario, id_item, quantidade});
-});
-
 export default routes;
