@@ -5,9 +5,9 @@ import { Purchase } from './entities/purchase';
 export const typeormDataSource = new DataSource({
   type: 'postgres',
   url: vars.db.postgres,
-  synchronize: false,
+  synchronize: true,
   logging: vars.app.env !== 'production',
-  entities: [ Purchase ],
+  entities: [Purchase],
   migrations: ["db/migrations/*.ts"],
 });
 

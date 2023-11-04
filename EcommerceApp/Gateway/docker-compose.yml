@@ -1,0 +1,23 @@
+version: '3'
+
+networks:
+  api-gateway:
+    name: api-gateway
+
+services:
+  postgres:
+    platform: linux/amd64
+    image: postgres
+    hostname: postgres
+    networks: [ api-gateway ]
+    container_name: api-gateway-postgres
+    ports: [ 5436:5432 ]
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    healthcheck:
+      test: [ 'CMD-SHELL', 'pg_isready -U postgres' ]
+      interval: 10s
+      timeout: 5s
+      start_period: 10s

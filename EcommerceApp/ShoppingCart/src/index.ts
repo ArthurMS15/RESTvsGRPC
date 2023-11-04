@@ -14,7 +14,6 @@ import server from './grpc/app';
 // GRPC STARTUP CODE
 typeormDataSource.initialize()
   .then(() => server.bindAsync('0.0.0.0:50051', ServerCredentials.createInsecure(), () => {
-  server.start();
-}))
+    server.start();
+  }))
 
-  
