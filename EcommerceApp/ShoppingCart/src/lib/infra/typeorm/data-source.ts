@@ -7,7 +7,7 @@ export const typeormDataSource = new DataSource({
   url: vars.db.postgres,
   synchronize: false,
   logging: vars.app.env !== 'production',
-  entities: [ ShoppingCart ],
+  entities: [ShoppingCart],
   migrations: ["db/migrations/*.ts"],
 });
 

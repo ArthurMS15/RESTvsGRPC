@@ -1,9 +1,11 @@
+import { ServerCredentials } from '@grpc/grpc-js';
 import { typeormDataSource } from './lib/infra/typeorm/data-source';
-import { ServerCredentials } from "@grpc/grpc-js"
 import logger from './logger';
-import app from './web/app';
 import vars from './vars';
+import app from './web/app';
 import server from './grpc/app';
+
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = "0";
 
 
 // REST STARTUP CODE
@@ -14,7 +16,6 @@ import server from './grpc/app';
 // GRPC STARTUP CODE
 typeormDataSource.initialize()
   .then(() => server.bindAsync('0.0.0.0:50054', ServerCredentials.createInsecure(), () => {
-  server.start();
-}))
+    server.start();
+  }))
 
-  

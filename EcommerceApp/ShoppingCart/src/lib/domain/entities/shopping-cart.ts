@@ -3,6 +3,7 @@ export type ShoppingCart = {
   userId: string;
   itemId: string;
   amount: number;
+  price: number;
   createdAt: Date;
   updatedAt: Date;
 }

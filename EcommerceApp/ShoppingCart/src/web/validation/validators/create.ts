@@ -6,6 +6,7 @@ type CreateInput = {
     userId: string;
     itemId: string;
     amount: number;
+    price: number;
   }
 }
 
@@ -15,6 +16,7 @@ export const createValidator = joiHelpers.makeValidator(
       userId: Joi.string().required(),
       itemId: Joi.string().required(),
       amount: Joi.number().required(),
+      price: Joi.number().required(),
     }),
   })
 );

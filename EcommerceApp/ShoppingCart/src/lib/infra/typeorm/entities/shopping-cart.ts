@@ -19,4 +19,7 @@ export class ShoppingCart {
 
   @Column({ type: "int" })
   amount: number;
+
+  @Column({ type: "decimal" })
+  price: number;
 }

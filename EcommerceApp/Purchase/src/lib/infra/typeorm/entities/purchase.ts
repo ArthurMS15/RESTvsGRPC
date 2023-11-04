@@ -1,3 +1,4 @@
+import { Purchase as DomainPurchase } from '$/lib/domain/entities/purchase';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
@@ -5,8 +6,8 @@ export class Purchase {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column()
-  status: "processing" | "completed";
+  @Column({ type: "varchar"})
+  status: DomainPurchase["status"];
 
   @Column({ type: 'timestamptz', default: () => "CURRENT_TIMESTAMP"})
   updatedAt: Date;

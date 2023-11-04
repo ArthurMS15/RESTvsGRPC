@@ -1,9 +1,9 @@
 import { ServerCredentials } from '@grpc/grpc-js';
 import server from './grpc/app';
 import { startTransporter } from './lib/infra/nodemailer/transport';
-import logger from './logger';
 import vars from './vars';
 import app from './web/app';
+import logger from './logger';
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = "0";
 

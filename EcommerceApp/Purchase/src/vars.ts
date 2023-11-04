@@ -13,6 +13,10 @@ const vars = {
     limit: Number(env.DB_LIMIT ?? 50),
     postgres: env.DB_POSTGRES ?? 'postgresql://postgres:postgres@localhost:5435/postgres',
   },
+  notificationService: {
+    restUrl: "http://localhost:3005/api/sendMail",
+    grpcUrl: "localhost:50055"
+  }
 };
 
 export default vars;

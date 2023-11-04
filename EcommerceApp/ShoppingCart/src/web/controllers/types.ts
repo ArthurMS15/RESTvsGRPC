@@ -4,5 +4,6 @@ export type ShoppingCartController = {
   get: RequestHandler,
   create: RequestHandler,
   delete: RequestHandler,
-  update: RequestHandler
+  update: RequestHandler,
+  checkout: RequestHandler
 }

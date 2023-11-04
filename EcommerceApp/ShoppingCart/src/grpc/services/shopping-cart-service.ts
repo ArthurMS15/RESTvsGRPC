@@ -3,6 +3,8 @@ import { updateUseCase } from '$/lib/useCases/update'
 import { deleteUseCase } from '$/lib/useCases/delete'
 import { getUseCase } from '$/lib/useCases/get'
 import { ShoppingCartService } from './types';
+import { checkoutUseCase } from '$/lib/useCases/checkout';
+import { createPurchase } from '$/lib/infra/purchaseClient/grpcPurchase';
 
 export const shoppingCartService: ShoppingCartService = {
   getShoppingCartsByUser: async (call, callback) => {
@@ -30,5 +32,10 @@ export const shoppingCartService: ShoppingCartService = {
     await updateUseCase({ id: call.request.id, params: { amount: call.request.amount }});
 
     callback(null, {});
+  },
+  checkout: async (call, callback) => {
+    const result = await checkoutUseCase(call.request, createPurchase);
+
+    callback(null, result);
   },
 }

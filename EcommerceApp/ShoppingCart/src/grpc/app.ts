@@ -2,7 +2,7 @@ import { loadPackageDefinition, Server, ServerCredentials } from "@grpc/grpc-js"
 import { loadSync } from "@grpc/proto-loader"
 import { shoppingCartService } from './services/shopping-cart-service';
 
-const PROTO_PATH = __dirname + '/protos/shoppingCart.proto';
+const PROTO_PATH = "../proto/ecommerce.proto";
 
 const packageDefinition = loadSync(
     PROTO_PATH,
@@ -14,7 +14,7 @@ const packageDefinition = loadSync(
   });
     
 const protoDescriptor = loadPackageDefinition(packageDefinition);
-const ecommerce = protoDescriptor.ecommerce;
+export const ecommerce = protoDescriptor.ecommerce;
 
 const server = new Server();
 

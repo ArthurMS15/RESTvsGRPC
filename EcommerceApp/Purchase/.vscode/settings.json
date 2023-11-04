@@ -50,5 +50,8 @@
   "typescript.format.insertSpaceAfterConstructor": true,
   "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
   "typescript.preferences.importModuleSpecifier": "shortest",
-  "typescript.preferences.quoteStyle": "single"
+  "typescript.preferences.quoteStyle": "single",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }

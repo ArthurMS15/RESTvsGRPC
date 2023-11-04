@@ -7,5 +7,6 @@ export namespace CreateUseCase {
     amount: number;
     itemId: string;
     userId: string;
+    price: number;
   }
 }

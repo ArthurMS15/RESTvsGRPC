@@ -7,12 +7,15 @@ import { getUseCase } from '$/lib/useCases/get'
 import { deleteValidator } from '../validation/validators/delete';
 import { updateValidator } from '../validation/validators/update'
 import { getValidator } from '../validation/validators/get'
+import { checkoutValidator } from '../validation/validators/checkout'
+import { checkoutUseCase } from '$/lib/useCases/checkout'
+import { createPurchase } from '$/lib/infra/purchaseClient/restPurchase'
 
 export const shoppingCartController: ShoppingCartController = {
   get: async (req, res) => {
     const data = await getValidator(req);
     const result = await getUseCase(data.params);
-    res.json(result); 
+    res.json(result);
   },
   create: async (req, res) => {
     const data = await createValidator(req);
@@ -27,6 +30,11 @@ export const shoppingCartController: ShoppingCartController = {
   update: async (req, res) => {
     const data = await updateValidator(req);
     const result = await updateUseCase({ id: data.params.id, params: data.body });
+    res.json(result);
+  },
+  checkout: async (req, res) => {
+    const data = await checkoutValidator(req);
+    const result = await checkoutUseCase(data.body, createPurchase);
     res.json(result);
   },
 }

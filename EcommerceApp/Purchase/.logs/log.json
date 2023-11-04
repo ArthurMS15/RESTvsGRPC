@@ -64,3 +64,39 @@
 {"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
 {"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
 {"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"HTTP POST /api/purchase","meta":{"req":{"headers":{"accept":"*/*","content-length":"74","content-type":"application/json","host":"localhost:3004","user-agent":"Insomnia/2023.5.7"},"httpVersion":"1.1","method":"POST","originalUrl":"/api/purchase","query":{},"url":"/api/purchase"},"res":{"statusCode":200},"responseTime":82}}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"error","message":"Data type \"Object\" in \"Purchase.status\" is not supported by \"postgres\" database."}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"HTTP POST /api/purchase","meta":{"req":{"headers":{"accept":"*/*","content-length":"74","content-type":"application/json","host":"localhost:3004","user-agent":"Insomnia/2023.5.7"},"httpVersion":"1.1","method":"POST","originalUrl":"/api/purchase","query":{},"url":"/api/purchase"},"res":{"statusCode":500},"responseTime":161}}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"error"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"HTTP POST /api/purchase","meta":{"req":{"headers":{"accept":"*/*","content-length":"74","content-type":"application/json","host":"localhost:3004","user-agent":"Insomnia/2023.5.7"},"httpVersion":"1.1","method":"POST","originalUrl":"/api/purchase","query":{},"url":"/api/purchase"},"res":{"statusCode":500},"responseTime":145}}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"error"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"HTTP POST /api/purchase","meta":{"req":{"headers":{"accept":"*/*","content-length":"74","content-type":"application/json","host":"localhost:3004","user-agent":"Insomnia/2023.5.7"},"httpVersion":"1.1","method":"POST","originalUrl":"/api/purchase","query":{},"url":"/api/purchase"},"res":{"statusCode":200},"responseTime":88}}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"HTTP POST /api/purchase","meta":{"req":{"headers":{"accept":"*/*","content-length":"74","content-type":"application/json","host":"localhost:3004","user-agent":"Insomnia/2023.5.7"},"httpVersion":"1.1","method":"POST","originalUrl":"/api/purchase","query":{},"url":"/api/purchase"},"res":{"statusCode":200},"responseTime":222}}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"HTTP POST /api/purchase","meta":{"req":{"headers":{"accept":"*/*","content-length":"74","content-type":"application/json","host":"localhost:3004","user-agent":"Insomnia/2023.5.7"},"httpVersion":"1.1","method":"POST","originalUrl":"/api/purchase","query":{},"url":"/api/purchase"},"res":{"statusCode":200},"responseTime":253}}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"HTTP POST /api/purchase","meta":{"req":{"headers":{"accept":"*/*","content-length":"74","content-type":"application/json","host":"localhost:3004","user-agent":"Insomnia/2023.5.7"},"httpVersion":"1.1","method":"POST","originalUrl":"/api/purchase","query":{},"url":"/api/purchase"},"res":{"statusCode":200},"responseTime":3326}}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"HTTP POST /api/purchase","meta":{"req":{"headers":{"accept":"*/*","content-length":"74","content-type":"application/json","host":"localhost:3004","user-agent":"Insomnia/2023.5.7"},"httpVersion":"1.1","method":"POST","originalUrl":"/api/purchase","query":{},"url":"/api/purchase"},"res":{"statusCode":200},"responseTime":3154}}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"running on 3004"}
+{"app":{"name":"purchase","version":"1.0.0"},"level":"info","message":"HTTP POST /api/purchase","meta":{"req":{"headers":{"accept":"application/json, text/plain, */*","accept-encoding":"gzip, compress, deflate, br","connection":"close","content-length":"62","content-type":"application/json","host":"localhost:3004","user-agent":"axios/1.5.0"},"httpVersion":"1.1","method":"POST","originalUrl":"/api/purchase","query":{},"url":"/api/purchase"},"res":{"statusCode":200},"responseTime":3375}}

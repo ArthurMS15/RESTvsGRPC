@@ -2,7 +2,7 @@ import { loadPackageDefinition, Server, ServerCredentials } from "@grpc/grpc-js"
 import { loadSync } from "@grpc/proto-loader"
 import { wishlistService } from './services/wishlist-service';
 
-const PROTO_PATH = __dirname + '/protos/wishlist.proto';
+const PROTO_PATH = "../proto/ecommerce.proto";
 
 const packageDefinition = loadSync(
     PROTO_PATH,

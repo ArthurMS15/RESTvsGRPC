@@ -5,4 +5,5 @@ export type ShoppingCartService = {
   createShoppingCart: (call: ServerUnaryCall<any, any>, callback: sendUnaryData<any>) => Promise<void>;
   deleteShoppingCart: (call: ServerUnaryCall<any, any>, callback: sendUnaryData<any>) => Promise<void>;
   updateShoppingCart: (call: ServerUnaryCall<any, any>, callback: sendUnaryData<any>) => Promise<void>;
+  checkout: (call: ServerUnaryCall<any, any>, callback: sendUnaryData<any>) => Promise<void>;
 }
