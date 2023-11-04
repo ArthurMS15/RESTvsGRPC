@@ -1,0 +1,34 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+package ecommerce;
+
+service WishlistService {
+  rpc GetWishlistItemsByUser (GetWishlistItemsRequest) returns (GetWishlistItemsResponse);
+  rpc CreateWishlistItem (CreateWishlistItemRequest) returns (WishlistItem);
+  rpc DeleteWishlistItem (DeleteWishlistItemRequest) returns (google.protobuf.Empty);
+}
+
+message GetWishlistItemsRequest {
+  string userId = 1;
+}
+
+message GetWishlistItemsResponse {
+  repeated WishlistItem wishlistItems = 1;
+}
+
+message CreateWishlistItemRequest {
+  string userId = 1;
+  string itemId = 2;
+}
+
+message DeleteWishlistItemRequest {
+  string id = 1;
+}
+message WishlistItem {
+  string id = 1;
+  string userId = 2;
+  string itemId = 3;
+  string createdAt = 5;
+  string updatedAt = 6;
+}

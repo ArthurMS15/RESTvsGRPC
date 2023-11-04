@@ -1,0 +1,23 @@
+version: '3'
+
+networks:
+  wishlist:
+    name: wishlist
+
+services:
+  postgres:
+    platform: linux/amd64
+    image: postgres
+    hostname: postgres
+    networks: [ wishlist ]
+    container_name: wishlist-postgres
+    ports: [ 5434:5432 ]
+    environment: 
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
