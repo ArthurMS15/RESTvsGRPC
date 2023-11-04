@@ -1,9 +1,12 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class ShoppingCart {
+export class CatalogItem {
   @PrimaryGeneratedColumn('uuid')
   id: string;
+
+  @Column()
+  name: string;
 
   @Column({ type: 'timestamptz', default: () => "CURRENT_TIMESTAMP"})
   updatedAt: Date;
@@ -11,12 +14,6 @@ export class ShoppingCart {
   @Column({ type: 'timestamptz', default: () => "CURRENT_TIMESTAMP"})
   createdAt: Date;
 
-  @Column({ type: "uuid"})
-  userId: string;
-
-  @Column({  type: "uuid"})
-  itemId: string;
-
-  @Column({ type: "int" })
-  amount: number;
+  @Column({ type: "decimal" })
+  price: number;
 }
