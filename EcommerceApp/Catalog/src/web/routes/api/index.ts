@@ -1,14 +1,11 @@
 import { loggerMiddleware } from '$/web/middlewares/logger';
 import { Router } from 'express';
-import { shoppingCartController } from '$/web/controllers/catalog-controller';
+import { catalogController } from '$/web/controllers/catalog-controller';
 
 const apiRoutes = Router();
 
 apiRoutes.use(loggerMiddleware);
 
-apiRoutes.post('/cart', shoppingCartController.create);
-apiRoutes.get('/cart/:userId', shoppingCartController.get);
-apiRoutes.put('/cart/:id', shoppingCartController.update);
-apiRoutes.delete('/cart/:id', shoppingCartController.delete);
+apiRoutes.post('/searchCatalog', catalogController.search);
 
 export default apiRoutes;

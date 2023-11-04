@@ -2,7 +2,7 @@ import packageJson from '../package.json';
 const { env, cwd } = process;
 
 const vars = {
-  port: Number(env.PORT ?? 3000),
+  port: Number(env.PORT ?? 3001),
   path: cwd(),
   app: {
     env: env.NODE_ENV, // default "development"
@@ -11,7 +11,7 @@ const vars = {
   },
   db: {
     limit: Number(env.DB_LIMIT ?? 50),
-    postgres: env.DB_POSTGRES ?? 'postgresql://postgres:postgres@localhost:5432/postgres',
+    postgres: env.DB_POSTGRES ?? 'postgresql://postgres:postgres@localhost:5433/postgres',
   },
 };
 

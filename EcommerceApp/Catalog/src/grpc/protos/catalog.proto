@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package ecommerce;
+
+service CatalogService {
+  rpc SearchCatalog(SearchCatalogRequest) returns (SearchCatalogResponse);
+}
+
+message SearchCatalogRequest {
+  string queryString = 1;
+}
+
+message SearchCatalogResponse {
+  repeated Catalog catalogItems = 1;
+}
+
+message Catalog {
+  string id = 1;
+  string name = 2;
+  float price = 4;
+  string createdAt = 5;
+  string updatedAt = 6;
+}
