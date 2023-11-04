@@ -5,7 +5,7 @@ export const catalogService: CatalogService = {
   searchCatalog: async (call, callback) => {
     const request = call.request
     const result = await searchUseCase(request);
-    
+
     callback(null, {
       catalogItems: result
     });

@@ -11,8 +11,9 @@ const vars = {
   },
   db: {
     limit: Number(env.DB_LIMIT ?? 50),
-    postgres: env.DB_POSTGRES ?? 'postgresql://postgres:postgres@localhost:5432/postgres',
+    postgres: env.DB_POSTGRES ?? 'postgresql://postgres:postgres@localhost:5436/postgres',
   },
+  privateKey: "SECRETKEY",
   shoppingCartService: {
     restUrl: "http://localhost:3000",
     grpcUrl: "localhost:50051"

@@ -4,6 +4,9 @@ import { Router } from 'express';
 import vars from '$/vars';
 import { ecommerce } from '$/grpc/app';
 import { credentials } from '@grpc/grpc-js';
+import { loginUseCase } from '$/lib/useCases/login';
+import jsonWebToken from 'jsonwebtoken';
+import { authMiddleware } from '$/web/middlewares/auth';
 
 const shoppingCartServiceStub = new (ecommerce as any).ShoppingCartService(vars.shoppingCartService.grpcUrl, credentials.createInsecure());
 const catalogServiceStub = new (ecommerce as any).CatalogService(vars.catalogService.grpcUrl, credentials.createInsecure());
@@ -12,6 +15,7 @@ const wishlistService = new (ecommerce as any).WishlistService(vars.wishlistServ
 const apiRoutes = Router();
 
 apiRoutes.use(loggerMiddleware);
+apiRoutes.use(authMiddleware);
 
 // REST PROXY
 apiRoutes.all("/api/catalog*", httpProxy(vars.catalogService.restUrl));
