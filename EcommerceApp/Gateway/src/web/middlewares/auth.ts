@@ -19,9 +19,9 @@ export const authMiddleware: RequestHandler = (
 
   try {
     const payload = jsonwebtoken.verify(token, vars.privateKey);
-    const userIdFromToken = typeof payload != "string" && payload.user;
+    const userExistsInToken = typeof payload != "string" && payload.user;
 
-    if (!userIdFromToken) {
+    if (!userExistsInToken) {
       return response.status(401).json({ message: "Invalid token" })
     }
 

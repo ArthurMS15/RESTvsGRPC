@@ -9,7 +9,6 @@ const publicRoutes = Router();
 publicRoutes.use(loggerMiddleware);
 
 publicRoutes.post('/login', async (req, res) => {
-  console.log(" AAA")
   try {
     const user = await loginUseCase(req.body);
 
