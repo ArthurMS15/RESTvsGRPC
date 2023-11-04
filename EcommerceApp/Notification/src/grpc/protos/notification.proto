@@ -1,0 +1,20 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+package ecommerce;
+
+service NotificationService {
+  rpc CreateNotification(CreateNotificationRequest) returns (google.protobuf.Empty);
+}
+
+message CreateNotificationRequest {
+  string userId = 1;
+  string purchaseId = 2;
+  string status = 3;
+}
+
+message Notification {
+  string id = 1;
+  string userId = 2;
+  string status = 3;
+}
